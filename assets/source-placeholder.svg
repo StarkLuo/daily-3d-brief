@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 850" role="img" aria-labelledby="title desc">
+  <title id="title">原图来源占位图</title>
+  <desc id="desc">第三方论文及产品图片未随开源仓库分发，请点击查看官方来源。</desc>
+  <defs>
+    <linearGradient id="surface" x2="1" y2="1">
+      <stop stop-color="#182b3f"/>
+      <stop offset="1" stop-color="#2b5b80"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="850" fill="url(#surface)"/>
+  <g fill="none" stroke="#9cc7e5" stroke-width="8" opacity=".7">
+    <rect x="563" y="145" width="474" height="340" rx="28"/>
+    <circle cx="918" cy="239" r="38"/>
+    <path d="m601 432 134-130 91 86 92-70 83 82"/>
+  </g>
+  <text x="800" y="600" fill="#fff" text-anchor="middle" font-family="sans-serif" font-size="58" font-weight="700">原图未随仓库分发</text>
+  <text x="800" y="675" fill="#c8dbea" text-anchor="middle" font-family="sans-serif" font-size="30">点击图片查看论文或产品的官方来源</text>
+</svg>

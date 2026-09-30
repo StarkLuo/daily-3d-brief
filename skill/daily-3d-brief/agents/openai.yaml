@@ -1,0 +1,5 @@
+interface:
+  display_name: "每日 3D/4D 简报"
+  short_description: "检索去重并生成图文并茂的 HTML 学术与产业每日简报"
+  brand_color: "#3267E3"
+  default_prompt: "使用 $daily-3d-brief 生成今天的事件视觉与前馈 3D/4D HTML 简报。"

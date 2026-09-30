@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>每日学术与产业简报｜2026-09-22</title>
+  <style>
+    :root {
+      --paper: #f8f6f1;
+      --ink: #15232f;
+      --muted: #65717b;
+      --line: #d9ddd8;
+      --blue: #3267e3;
+      --blue-soft: #e9efff;
+      --green: #14936f;
+      --green-soft: #e5f6f0;
+      --orange: #e26d32;
+      --orange-soft: #fff0e6;
+      --violet: #7856c8;
+      --violet-soft: #f1ecff;
+      --shadow: 0 18px 55px rgba(31, 43, 52, .13);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(50, 103, 227, .11), transparent 30rem),
+        #e9ecec;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.58;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--blue); }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: min(1120px, calc(100% - 32px));
+      margin: 12px auto;
+      padding: 10px 14px;
+      color: #f7fafc;
+      background: rgba(21, 35, 47, .94);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 14px;
+      backdrop-filter: blur(14px);
+      font-size: 13px;
+    }
+
+    .toolbar button {
+      border: 0;
+      border-radius: 999px;
+      padding: 8px 14px;
+      color: #fff;
+      background: var(--blue);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    main { padding: 4px 0 54px; }
+
+    .page {
+      position: relative;
+      width: min(1120px, calc(100% - 32px));
+      min-height: 820px;
+      margin: 18px auto;
+      padding: 48px 54px 52px;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid rgba(21, 35, 47, .08);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 6px;
+      background: linear-gradient(90deg, var(--blue), var(--green), #f0b44d);
+    }
+
+    .page-no {
+      position: absolute;
+      right: 42px;
+      bottom: 22px;
+      color: #879198;
+      font-size: 11px;
+      letter-spacing: .12em;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 820px;
+      margin-bottom: 16px;
+      font-family: Georgia, "Songti SC", "STSong", serif;
+      font-size: clamp(38px, 5.6vw, 68px);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-family: Georgia, "Songti SC", "STSong", serif;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+    h3 { margin-bottom: 8px; font-size: 18px; line-height: 1.28; }
+
+    .title-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .date-lockup {
+      min-width: 130px;
+      padding-top: 10px;
+      text-align: right;
+    }
+
+    .date-lockup strong {
+      display: block;
+      font: 700 28px/1 Georgia, serif;
+    }
+
+    .date-lockup span { color: var(--muted); font-size: 12px; }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 18px;
+      margin-bottom: 24px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .meta span::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin-right: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      vertical-align: 1px;
+    }
+
+    .lede {
+      display: grid;
+      grid-template-columns: 1.5fr .7fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .headline-box {
+      padding: 23px 25px;
+      color: #f8fbff;
+      background: var(--ink);
+      border-radius: 18px;
+    }
+
+    .headline-box .label { color: #95b5ff; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+    .headline-box p { margin: 7px 0 0; font: 600 20px/1.5 Georgia, "Songti SC", serif; }
+
+    .radar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 74px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .metric b { font: 700 25px/1 Georgia, serif; }
+    .metric span { color: var(--muted); font-size: 11px; line-height: 1.3; }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin: 26px 0 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-head h2 { margin: 0; font-size: 25px; }
+    .section-head p { max-width: 420px; margin: 0; color: var(--muted); font-size: 12px; text-align: right; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .feature {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+    }
+
+    .feature figure { margin: 0; background: #fff; border-bottom: 1px solid var(--line); }
+    .feature img { display: block; width: 100%; aspect-ratio: 16 / 8.5; object-fit: cover; }
+    .feature figcaption { padding: 6px 12px; color: var(--muted); font-size: 9px; }
+    .feature-body { padding: 17px 18px 18px; }
+
+    .rank { color: var(--blue); font-size: 11px; font-weight: 800; letter-spacing: .1em; }
+    .feature h3 { font-size: 21px; }
+    .feature p { margin-bottom: 10px; color: #35434d; font-size: 13px; }
+
+    .takeaway {
+      margin: 0 !important;
+      padding: 10px 12px;
+      background: var(--blue-soft);
+      border-left: 3px solid var(--blue);
+      border-radius: 0 9px 9px 0;
+      font-size: 12px !important;
+    }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 12px; }
+    .tag {
+      display: inline-flex;
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: #24456d;
+      background: var(--blue-soft);
+      font-size: 10px;
+      font-weight: 750;
+    }
+    .tag.green { color: #17664f; background: var(--green-soft); }
+    .tag.orange { color: #91481f; background: var(--orange-soft); }
+    .tag.violet { color: #594096; background: var(--violet-soft); }
+
+    .linkline { margin: 0; font-size: 11px !important; font-weight: 700; }
+
+    .signal-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .signal {
+      padding: 13px 14px;
+      border-radius: 13px;
+      background: #edf0ee;
+      font-size: 11px;
+    }
+    .signal b { display: block; margin-bottom: 2px; color: var(--ink); font-size: 12px; }
+
+    .lead-card {
+      display: grid;
+      grid-template-columns: .78fr 1.35fr;
+      gap: 20px;
+      margin-bottom: 18px;
+      padding: 21px;
+      color: #fff;
+      background: linear-gradient(135deg, #1e3158, #285897 66%, #2e73bb);
+      border-radius: 19px;
+    }
+
+    .lead-card .lead-kicker { color: #b9d0ff; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
+    .lead-card h3 { margin: 5px 0 7px; font-size: 24px; }
+    .lead-card p { margin-bottom: 0; color: #e3ebf6; font-size: 12px; }
+    .lead-card .lead-points { display: grid; gap: 9px; }
+    .lead-point { padding: 10px 12px; background: rgba(255,255,255,.09); border-radius: 11px; font-size: 11px; }
+    .lead-point b { color: #fff; }
+
+    .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+
+    .paper-card {
+      position: relative;
+      min-height: 175px;
+      padding: 15px 15px 14px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: #fff;
+    }
+
+    .paper-card h3 { margin: 7px 0 7px; font-size: 16px; }
+    .paper-card p { margin: 0 0 8px; color: #44515a; font-size: 11px; }
+    .paper-card .micro { color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .06em; }
+    .paper-card .verdict { padding-top: 8px; border-top: 1px solid #eceeec; color: var(--ink); font-size: 10px; }
+
+    .full-row { grid-column: 1 / -1; }
+
+    .minor-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .minor-item {
+      padding: 12px 14px;
+      border: 1px dashed #cbd1cf;
+      border-radius: 13px;
+      font-size: 10px;
+    }
+    .minor-item strong { display: block; margin-bottom: 3px; font-size: 12px; }
+
+    .industry {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      min-height: 310px;
+      overflow: hidden;
+      border-radius: 19px;
+      background: #101b22;
+    }
+
+    .industry figure { position: relative; margin: 0; min-height: 100%; }
+    .industry img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .industry figure::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 55%, #101b22); }
+    .industry-copy { position: relative; z-index: 2; padding: 27px 25px 25px 6px; color: #fff; }
+    .industry-copy .eyebrow { color: #75e2bf; }
+    .industry-copy h3 { font: 700 27px/1.18 Georgia, "Songti SC", serif; }
+    .industry-copy p { color: #c8d1d6; font-size: 12px; }
+    .industry-copy .market {
+      padding: 12px;
+      color: #e4fff6;
+      background: rgba(20, 147, 111, .18);
+      border-left: 3px solid #38c79d;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .panel {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .panel h3 { font-size: 17px; }
+    .panel p, .panel li { color: #44515a; font-size: 11px; }
+    .panel ol { margin: 0; padding-left: 20px; }
+    .panel li + li { margin-top: 7px; }
+
+    .empty-state { background: linear-gradient(145deg, #fff, var(--green-soft)); }
+    .empty-state .zero { display: block; color: var(--green); font: 700 48px/.9 Georgia, serif; }
+
+    .research-gap {
+      margin-top: 16px;
+      padding: 18px 20px;
+      color: #3d2f13;
+      background: #fff3cf;
+      border: 1px solid #edd998;
+      border-radius: 15px;
+    }
+    .research-gap b { display: block; margin-bottom: 4px; font-size: 13px; }
+    .research-gap p { margin: 0; font: 600 15px/1.55 Georgia, "Songti SC", serif; }
+
+    .notes {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      margin-top: 17px;
+      padding-top: 13px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    .notes p { margin-bottom: 5px; }
+
+    @media (max-width: 780px) {
+      .page { width: min(100% - 18px, 680px); min-height: auto; padding: 34px 22px 52px; border-radius: 18px; }
+      .toolbar { width: calc(100% - 18px); }
+      .title-row, .lede, .feature-grid, .lead-card, .industry, .bottom-grid, .notes { grid-template-columns: 1fr; }
+      .date-lockup { min-width: 0; text-align: left; }
+      .card-grid, .signal-strip, .minor-strip { grid-template-columns: 1fr; }
+      .section-head { align-items: start; flex-direction: column; }
+      .section-head p { text-align: left; }
+      .industry figure { min-height: 240px; }
+      .industry figure::after { background: linear-gradient(0deg, #101b22, transparent 60%); }
+      .industry-copy { padding: 24px; }
+    }
+
+    @page { size: A4 portrait; margin: 9mm; }
+
+    @media print {
+      body { background: #fff; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .toolbar { display: none; }
+      main { padding: 0; }
+      .page {
+        width: 100%;
+        min-height: 277mm;
+        max-height: 277mm;
+        margin: 0;
+        padding: 10mm 11mm 11mm;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        break-after: page;
+      }
+      .page:last-child { break-after: auto; }
+      .page::before { height: 3px; }
+      h1 { font-size: 39px; }
+      h2 { font-size: 23px; }
+      .feature img { aspect-ratio: 16 / 8; }
+      .feature-body { padding: 10px 12px 11px; }
+      .feature h3 { font-size: 16px; }
+      .feature p { font-size: 9px; }
+      .feature figcaption, .tag, .linkline { font-size: 7px !important; }
+      .signal-strip { margin-top: 10px; }
+      .signal { padding: 8px 9px; font-size: 8px; }
+      .signal b { font-size: 9px; }
+      .lead-card { padding: 14px; margin-bottom: 10px; }
+      .lead-card h3 { font-size: 18px; }
+      .lead-card p, .lead-point { font-size: 8px; }
+      .paper-card { min-height: 0; padding: 9px 10px; }
+      .paper-card h3 { font-size: 12px; margin: 4px 0; }
+      .paper-card p, .paper-card .verdict { font-size: 7.5px; }
+      .paper-card .micro { font-size: 6.5px; }
+      .minor-item { padding: 8px 9px; font-size: 7.5px; }
+      .minor-item strong { font-size: 9px; }
+      .industry { min-height: 235px; }
+      .industry-copy { padding: 18px 18px 16px 4px; }
+      .industry-copy h3 { font-size: 20px; }
+      .industry-copy p { font-size: 8.5px; }
+      .panel { padding: 12px; }
+      .panel h3 { font-size: 13px; }
+      .panel p, .panel li { font-size: 8px; }
+      .research-gap { padding: 11px 13px; }
+      .research-gap p { font-size: 11px; }
+      .notes { font-size: 7px; }
+      a { text-decoration: none; }
+    }
+    .source-image-link { display: block; }
+    .industry figure .source-image-link { position: absolute; inset: 0; z-index: 1; }
+    .industry figure::after { pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div class="toolbar" role="region" aria-label="简报工具栏">
+    <span>每日学术与产业简报 · HTML 样稿 · 3 页打印版</span>
+    <button type="button" onclick="window.print()">打印 / 导出 PDF</button>
+  </div>
+
+  <main>
+    <section class="page" aria-labelledby="cover-title">
+      <div class="title-row">
+        <div>
+          <p class="eyebrow">Research Intelligence Brief</p>
+          <h1 id="cover-title">事件视觉 × 前馈式 3D / 4D 重建</h1>
+        </div>
+        <div class="date-lockup">
+          <strong>09·22</strong>
+          <span>MONDAY · 2026</span>
+        </div>
+      </div>
+
+      <div class="meta">
+        <span>覆盖 arXiv 2026-09-21 官方批次</span>
+        <span>首次公开可见作为新增口径</span>
+        <span>生成于 08:06 CST</span>
+      </div>
+
+      <div class="lede">
+        <div class="headline-box">
+          <span class="label">今日一句话</span>
+          <p>前馈 3D 的竞争焦点正在从单帧精度，转向持久记忆、信息选择、全局一致性，以及可供 VLA 使用的未来几何表征。</p>
+        </div>
+        <div class="radar" aria-label="今日新增统计">
+          <div class="metric"><b>0</b><span>事件相机<br>3D / 4D 核心新增</span></div>
+          <div class="metric"><b>5</b><span>RGB 前馈 / 在线<br>3D 重建</span></div>
+          <div class="metric"><b>1</b><span>强相关<br>动态 4DGS</span></div>
+          <div class="metric"><b>2</b><span>前馈几何 ×<br>WM / VLA</span></div>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <h2>今日必读</h2>
+        <p>按与你研究主线的直接相关性排序；先看方法接口，再看指标提升。</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature" data-item-key="arxiv:2609.21498" data-item-title="VoxelTTO" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21498">
+          <figure>
+            <a class="source-image-link" href="https://arxiv.org/html/2609.21498v1" target="_blank" rel="noopener noreferrer"><img src="assets/source-placeholder.svg" data-no-zoom="true" alt="VoxelTTO 论文原图未随开源仓库分发；点击查看论文 Figure 1"></a>
+            <figcaption>原图未随开源仓库分发；<a href="https://arxiv.org/html/2609.21498v1" target="_blank" rel="noopener noreferrer">查看 VoxelTTO 论文 Figure 1 ↗</a></figcaption>
+          </figure>
+          <div class="feature-body">
+            <span class="rank">01 · DIRECT HIT</span>
+            <h3><a href="https://arxiv.org/abs/2609.21498">VoxelTTO</a></h3>
+            <div class="tags"><span class="tag">Feed-forward 3DGS</span><span class="tag green">Voxel-aligned</span><span class="tag orange">TTO</span></div>
+            <p><b>解决什么：</b>像素级回归会制造重叠 Gaussian 与伪影，位姿误差又会破坏新视角对齐。</p>
+            <p><b>怎么做：</b>多图特征先聚合进全局体素，再解码 Gaussian；相机先验可驱动轻量 LoRA 测试时优化，并用 stochastic solid volume rendering 加强几何监督。</p>
+            <p class="takeaway"><b>关键判断：</b>本轮最直接对应前馈 3DGS 的工作，但属于“前馈骨干 + 可选 TTO”的混合路线。</p>
+          </div>
+        </article>
+
+        <article class="feature" data-item-key="arxiv:2609.21228" data-item-title="FOCAL-VLA" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21228">
+          <figure>
+            <a class="source-image-link" href="https://arxiv.org/html/2609.21228v1" target="_blank" rel="noopener noreferrer"><img src="assets/source-placeholder.svg" data-no-zoom="true" alt="FOCAL-VLA 论文原图未随开源仓库分发；点击查看论文 Figure 1"></a>
+            <figcaption>原图未随开源仓库分发；<a href="https://arxiv.org/html/2609.21228v1" target="_blank" rel="noopener noreferrer">查看 FOCAL-VLA 论文 Figure 1 ↗</a></figcaption>
+          </figure>
+          <div class="feature-body">
+            <span class="rank">02 · CROSSOVER</span>
+            <h3><a href="https://arxiv.org/abs/2609.21228">FOCAL-VLA</a></h3>
+            <div class="tags"><span class="tag violet">VLA</span><span class="tag green">VGGT Distillation</span><span class="tag orange">Implicit WM</span></div>
+            <p><b>解决什么：</b>2D VLA 缺乏空间与时间理解，而全场景几何和未来预测又带来大量任务无关信息。</p>
+            <p><b>怎么做：</b>只在当前子任务相关区域蒸馏 VGGT 几何，并用 Track4World 当前/未来特征监督隐式 3D 演化；推理时移除两个昂贵 teacher。</p>
+            <p class="takeaway"><b>关键判断：</b>形成“前馈几何 teacher → 隐式 4D world representation → VLA action”的清晰路线。</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="signal-strip" aria-label="今日趋势信号">
+        <div class="signal"><b>表征在变</b>Pixel-aligned → voxel / persistent world memory。</div>
+        <div class="signal"><b>系统在变</b>一次前向 → 前馈初始化 + 选择性自适应。</div>
+        <div class="signal"><b>下游在变</b>可渲染重建 → action-relevant 3D / 4D token。</div>
+      </div>
+      <span class="page-no">01 / 03</span>
+    </section>
+
+    <section class="page" aria-labelledby="map-title">
+      <p class="eyebrow">Research Map</p>
+      <div class="section-head" style="margin-top:0">
+        <h2 id="map-title">核心研究地图</h2>
+        <p>把论文按“长期世界表征、前馈重建工程、动态补全、具身接口”组织，而不是按发布时间罗列。</p>
+      </div>
+
+      <article class="lead-card" data-item-key="arxiv:2609.21502" data-item-title="Adaptive World Memory 3D Foundation Model" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21502">
+        <div>
+          <span class="lead-kicker">03 · SYSTEM DESIGN</span>
+          <h3><a href="https://arxiv.org/abs/2609.21502">Adaptive World Memory 3D Foundation Model</a></h3>
+          <p>把持续记忆、机器人定位、稠密点云与 Gaussian rendering 合并进一个长期在线系统。</p>
+          <div class="tags"><span class="tag green">Persistent Memory</span><span class="tag">Gaussian Head</span><span class="tag orange">SLAM Backend</span></div>
+        </div>
+        <div class="lead-points">
+          <div class="lead-point"><b>核心结构：</b>transformer gated update + 时空一致性调节 token 的更新与遗忘。</div>
+          <div class="lead-point"><b>扩展机制：</b>local submaps、tracking、loop closure 与基于 SL(4) 的全局 refinement。</div>
+          <div class="lead-point"><b>研究价值：</b>展示前馈 3D 表征如何升级为 persistent robotic world representation；并非纯单次前向。</div>
+        </div>
+      </article>
+
+      <div class="card-grid">
+        <article class="paper-card" data-item-key="arxiv:2609.21938" data-item-title="Info3R" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21938">
+          <span class="micro">ONLINE ADAPTATION</span>
+          <h3><a href="https://arxiv.org/abs/2609.21938">Info3R</a></h3>
+          <p>根据新帧的信息量调制状态更新；累计更新幅度与置信度共同触发动态 reset，再用 anchor-to-world alignment 接回全局坐标。</p>
+          <p class="verdict"><b>看点：</b>从“每帧等量更新”转向显式评估帧价值与状态饱和。</p>
+        </article>
+
+        <article class="paper-card" data-item-key="arxiv:2609.21437" data-item-title="LoG-VGGT" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21437">
+          <span class="micro">MEMORY EFFICIENCY</span>
+          <h3><a href="https://arxiv.org/abs/2609.21437">LoG-VGGT</a></h3>
+          <p>少量 block 做跨窗口 attention，全局 camera token 再与紧凑 register token 交互，兼顾显存与长期位姿一致性。</p>
+          <p class="verdict"><b>看点：</b>前馈长序列重建的工程重点已转向跨窗记忆与全局相机精修。</p>
+        </article>
+
+        <article class="paper-card" data-item-key="arxiv:2609.21114" data-item-title="Noctif3R" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21114">
+          <span class="micro">FAIL-FAST SLAM</span>
+          <h3><a href="https://arxiv.org/abs/2609.21114">Noctif3R</a></h3>
+          <p>面向极暗、单目与嵌入式硬件，以显式 match gate 在不可观测时停止输出，并拆分 tracking 与建图分辨率。</p>
+          <p class="verdict"><b>看点：</b>对事件视觉的启发是把“何时拒绝重建”做成系统能力。</p>
+        </article>
+
+        <article class="paper-card" data-item-key="arxiv:2609.21176" data-item-title="4DGS-Fixer" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21176">
+          <span class="micro">DYNAMIC 4DGS · SIGGRAPH ASIA TC*</span>
+          <h3><a href="https://arxiv.org/abs/2609.21176">4DGS-Fixer</a></h3>
+          <p>以多视图深度改善初始化，再沿新轨迹渲染视频，用扩散修复结果反复回灌 4DGS，补全未观测区域。</p>
+          <p class="verdict"><b>看点：</b>“前馈初始化 + 生成先验精修”的上界参考；迭代成本需单列。</p>
+        </article>
+
+        <article class="paper-card" data-item-key="arxiv:2609.21347" data-item-title="Cube-Splat" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21347">
+          <span class="micro">ECCV 2026 · OFFICIAL LIST</span>
+          <h3><a href="https://arxiv.org/abs/2609.21347">Cube-Splat</a></h3>
+          <p>把 360° 图像分成共享光心的虚拟 pinhole view，在单一主位姿上聚合多视面梯度并优化 anisotropic Gaussians。</p>
+          <p class="verdict"><b>定位：</b>优化式 GS-SLAM，不是前馈核心；但会议状态已由官方列表核验。</p>
+        </article>
+
+        <article class="paper-card" data-item-key="arxiv:2609.21948" data-item-title="GALA" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21948">
+          <span class="micro">CROSS-EMBODIMENT ACTION</span>
+          <h3><a href="https://arxiv.org/abs/2609.21948">GALA</a></h3>
+          <p>以统一 3D 末端运动表示对齐人手与灵巧手，联合 visual latent action 和 geometric latent action 监督 VLA 预训练。</p>
+          <p class="verdict"><b>定位：</b>不含场景重建，但值得借鉴其跨 embodiment 的几何动作接口。</p>
+        </article>
+      </div>
+
+      <div class="minor-strip">
+        <div class="minor-item" data-item-key="arxiv:2609.21112" data-item-title="GaussianFactory" data-item-type="academic" data-item-url="https://arxiv.org/abs/2609.21112"><strong><a href="https://arxiv.org/abs/2609.21112">GaussianFactory</a></strong>单次扫描重建可编辑 3DGS，再批量生成机器人示范；展示 GS 作为 embodied data factory 的工程价值。</div>
+        <div class="minor-item"><strong>事件相机邻近项</strong>昆虫双目事件相机工作恢复三维目标轨迹，另有事件地点识别；均不是场景表面或辐射场重建。</div>
+        <div class="minor-item"><strong>状态口径</strong>除 Cube-Splat 外均按 arXiv 预印本处理；4DGS-Fixer 的接收状态目前来自 arXiv comments。</div>
+      </div>
+
+      <span class="page-no">02 / 03</span>
+    </section>
+
+    <section class="page" aria-labelledby="industry-title">
+      <p class="eyebrow">Industry & Implications</p>
+      <div class="section-head" style="margin-top:0">
+        <h2 id="industry-title">产业信号与研究判断</h2>
+        <p>关注技术是否从论文指标进入采集、生产、传输与具身数据闭环。</p>
+      </div>
+
+      <article class="industry" data-item-key="industry:https://www.insta360.com/product/insta360-x6" data-item-title="Insta360 Spatial Capture" data-item-type="industry" data-item-url="https://www.insta360.com/product/insta360-x6">
+        <figure>
+          <a class="source-image-link" href="https://www.insta360.com/product/insta360-x6" target="_blank" rel="noopener noreferrer"><img src="assets/source-placeholder.svg" data-no-zoom="true" alt="Insta360 官方产品图片未随开源仓库分发；点击查看产品页"></a>
+        </figure>
+        <div class="industry-copy">
+          <p class="eyebrow">Consumer Product Signal</p>
+          <h3>Insta360 Spatial Capture：消费相机 App 原生生成 Gaussian Splat</h3>
+          <p>官方产品页显示，X6、X5、X4 的部分模式可采集物体或空间，并在 App 中生成 3D Gaussian splatting model，自由移动视点浏览。</p>
+          <p>当前每月可使用四次，功能仍在开发，且部分地区不可用；官方页面未提供明确上线日期，因此本项视为“当前产品信号”，不强行标注为过去 24 小时发布。</p>
+          <p class="market"><b>市场意义：</b>3DGS 正从专业扫描工具转为消费相机原生能力，产品计量开始采用“每月生成次数”，可能加速空间记忆、房产文旅和 UGC 3D 内容。</p>
+          <p class="linkline"><a href="https://www.insta360.com/product/insta360-x6">查看官方产品页 ↗</a></p>
+        </div>
+      </article>
+
+      <div class="bottom-grid">
+        <section class="panel empty-state">
+          <span class="zero">0</span>
+          <h3>事件相机核心新增</h3>
+          <p>本批次没有发现事件相机场景 3D / 4D 重建或 Event-GS 新论文。邻近工作只恢复移动目标轨迹或做地点识别，不将“任何三维信息”泛化为“三维重建”。</p>
+        </section>
+
+        <section class="panel">
+          <h3>建议阅读顺序</h3>
+          <ol>
+            <li><b>VoxelTTO</b>：体素对齐解码与 solid rendering 的几何收益。</li>
+            <li><b>FOCAL-VLA</b>：VGGT / Track4World teacher 如何注入 VLA。</li>
+            <li><b>Adaptive World Memory</b>：记忆、submap 与 Gaussian head 的耦合。</li>
+            <li><b>Info3R + LoG-VGGT</b>：信息选择、状态饱和与跨窗一致性。</li>
+            <li><b>4DGS-Fixer</b>：生成式修复作为混合系统上界。</li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="research-gap">
+        <b>值得继续追踪的研究空白</b>
+        <p>事件流驱动的在线前馈几何记忆 + 可增量 Gaussian head + 面向 VLA 的 action-relevant 4D token。</p>
+      </aside>
+
+      <footer class="notes">
+        <div>
+          <p><b>检索口径：</b>arXiv cs.CV、cs.RO、cs.AI 的 2026-09-21 official recent 批次；以“上次运行后首次公开可见”作为新增，而不是只看 v1 日期。</p>
+          <p><b>核验：</b>论文题目、摘要、v1 时间与 comments 以 arXiv 为准；会议状态优先使用会议官方列表。新闻聚合仅用于发现线索，不作为唯一依据。</p>
+        </div>
+        <div>
+          <p><b>图片来源：</b>VoxelTTO、FOCAL-VLA 论文原图；Insta360 官方 X6 产品页。图片仅用于个人学术简报，均保留来源说明。</p>
+          <p><b>AI Disclosure：</b>本简报由 AI 辅助检索、筛选、核验、摘要与排版。</p>
+        </div>
+      </footer>
+
+      <span class="page-no">03 / 03</span>
+    </section>
+  </main>
+</body>
+</html>
